@@ -1,0 +1,115 @@
+.page-mv {
+  height: 260px;
+  width: 100%;
+  position: relative;
+
+  &.page-mv--no-copy {
+    .page-mv__page-title-area {
+      top: calc(58px + 26%);
+      
+      @media screen and (min-width: 768px) {
+        top: calc(112px + 21%);
+        
+      }
+    }
+  }
+
+  &.page-mv--no-image {
+    height: initial;
+    padding-top: 59px;
+
+    @media screen and (min-width: 768px) {
+      padding-top: 112px;
+    }
+
+    .page-mv__page-title-area {
+      padding-block: 16px;
+      position: static;
+      transform: initial;
+      
+      @media screen and (min-width: 768px) {
+        padding-block: 32px;
+        max-width: calc(1200px + (var(--padding-pc) * 2));
+        margin-inline: auto;
+      }
+    }
+
+    &::before {
+      content: none;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    height: 440px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.5);
+    z-index: 1;
+  }
+  .page-mv__mv-image {
+    height: 100%;
+    object-fit: cover;
+    object-position: top right;
+  }
+  
+  .page-mv__page-title-area {
+    padding-inline: var(--padding-sp);
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    top: calc(58px + 10%);
+    left: 0;
+  
+    @media screen and (min-width: 768px) {
+      padding-inline: var(--padding-pc);
+      max-width: 1248px;
+      left: 50%;
+      transform: translateX(-50%);
+      top: calc(112px + 17%);
+    }
+  }
+  
+  .page-mv__page-title-en {
+    color: var(--color-main);
+    line-height: 1;
+  
+    @media screen and (min-width: 768px) {
+      font-size: 20px;
+    }
+  }
+  
+  .page-mv__page-title-group {
+    margin-top: 4px;
+    display: grid;
+    row-gap: 12px;
+  
+    @media screen and (min-width: 768px) {
+      margin-top: 10px;
+      row-gap: 16px;
+    }
+  }
+  
+  .page-mv__page-title {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1;
+  
+    @media screen and (min-width: 768px) {
+      font-size: 58px;
+    }
+  }
+  
+  .page-mv__copy {
+    font-size: 14px;
+    line-height: 2;
+  
+    @media screen and (min-width: 768px) {
+      font-size: 16px;
+    }
+  }
+}
+

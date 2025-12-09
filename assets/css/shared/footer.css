@@ -1,0 +1,149 @@
+.footer {
+  background-color: var(--color-gray);
+  color: white;
+
+  .footer__inner {
+    background-color: var(--color-black);
+    border-top-left-radius: 40px;
+
+    @media screen and (min-width: 768px) {
+      border-top-left-radius: 120px;
+    }
+  }
+
+  .footer__items {
+    display: grid;
+    row-gap: 32px;
+    padding-block: 30px;
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+      column-gap: 16%;
+      padding-block: 80px;
+      padding-inline: var(--padding-pc);
+    }
+  }
+
+  .footer__info {
+    display: grid;
+    row-gap: 32px;
+
+    @media screen and (min-width: 768px) {
+      flex-shrink: 0;
+      row-gap: 16px;
+    }
+  }
+
+  .footer__logo {
+    display: block;
+    width: 100%;
+    max-width: 250px;
+    margin-inline: auto;
+
+    @media screen and (min-width: 768px) {
+      max-width: 320px;
+    }
+  }
+
+  .footer__address {
+    display: grid;
+    row-gap: 8px;
+
+    @media screen and (min-width: 768px) {
+      row-gap: 16px;
+    }
+  }
+
+  .footer__address-text {
+    font-size: 14px;
+    line-height: 1.6;
+
+    @media screen and (min-width: 768px) {
+      font-size: 16px;
+    }
+  }
+
+  .footer__tel-info {
+    display: grid;
+    row-gap: 6px;
+  }
+
+  .footer__tel {
+    display: flex;
+    column-gap: 6px;
+  }
+
+  .footer__tel-icon {
+    line-height: 1;
+    font-size: 18px;
+
+    @media screen and (min-width: 768px) {
+      font-size: 24px;
+    }
+  }
+
+  .footer__tel-text {
+    font-size: 32px;
+    line-height: 1;
+
+    @media screen and (min-width: 768px) {
+      font-size: 36px;
+    }
+  }
+
+  .footer__tel-note {
+    font-size: 16px;
+    line-height: 1.6;
+    display: flex;
+    align-items: center;
+    column-gap: 24px;
+  }
+
+  .footer__contents-lists {
+    display: grid;
+    row-gap: 16px;
+  }
+
+  .footer__contents-link {
+    font-weight: 700;
+    cursor: pointer;
+    transition: opacity 0.3s;
+    font-size: 18px;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &.footer__contents-link--no-link {
+      pointer-events: none;
+    }
+  }
+
+  .footer__child-contents {
+    margin-top: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .footer__child-content-link {
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  .footer__copy {
+    display: block;
+    background-color: var(--color-black);
+    color: white;
+    text-align: center;
+    font-weight: 700;
+    padding: 12px;
+
+    @media screen and (min-width: 768px) {
+      padding: 16px;
+    }
+  }
+}

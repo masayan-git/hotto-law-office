@@ -1,0 +1,163 @@
+.contact {
+  background-color: var(--color-gray);
+  border-top-right-radius: 70px;
+
+  @media screen and (min-width: 768px) {
+    border-top-right-radius: 140px;
+  }
+
+  .contact__inner {
+    display: grid;
+    row-gap: 16px;
+
+    @media screen and (min-width: 768px) {
+      grid-template-columns: max-content 1fr;
+      column-gap: 32px;
+    }
+  }
+
+  .contact__title-area {
+    display: grid;
+    row-gap: 20px;
+
+    @media screen and (min-width: 768px) {
+      grid-template-rows: max-content;
+    }
+  }
+
+  .contact__read-text {
+    font-size: 14px;
+    line-height: 2;
+    max-width: 390px;
+    width: 100%;
+    margin-inline: auto;
+
+    @media screen and (min-width: 768px) {
+      margin-inline: initial;
+    }
+  }
+
+  .contact__cta-area {
+    display: grid;
+    grid-auto-rows: max-content;
+    row-gap: 24px;
+    max-width: 450px;
+    width: 100%;
+    margin-inline: auto;
+
+    @media screen and (min-width: 768px) {
+      max-width: initial;
+      grid-template-columns: 1fr;
+    }
+
+    @media screen and (min-width: 1024px) {
+      grid-template-columns: 1fr 1fr;
+      column-gap: 24px;
+      row-gap: 26px;
+      grid-template-rows: max-content max-content;
+    }
+  }
+
+  .contact__cta-card {
+    padding: 24px;
+    background-color: white;
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: max-content 1fr max-content;
+    grid-template-rows: max-content;
+    align-items: center;
+    column-gap: 18px;
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    @media screen and (min-width: 768px) {
+      padding: 24px 36px;
+    }
+
+    &.contact__cta-card--line {
+      .contact__cta-card-icon {
+        line-height: 1;
+        font-size: 38px;
+        color: #54c260;
+      }
+    }
+
+    &.contact__cta-card--mail {
+      .contact__cta-card-icon {
+        line-height: 1;
+        font-size: 22px;
+        width: 38px;
+        height: 38px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--color-black);
+        border-radius: 50%;
+        color: white;
+      }
+    }
+  }
+
+  .contact__cta-card-text {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .contact__cta-tel {
+    display: grid;
+    row-gap: 8px;
+    background-color: var(--color-red);
+    border-radius: 9px;
+    padding: 16px;
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    @media screen and (min-width: 768px) {
+      padding: 24px;
+      column-gap: 14px;
+    }
+
+    @media screen and (min-width: 1024px) {
+      grid-column: span 2;
+    }
+  }
+
+  .contact__cta-tel-content {
+    display: flex;
+    justify-content: center;
+    column-gap: 6px;
+    align-items: baseline;
+  }
+
+  .contact__cta-tel-icon {
+    line-height: 1;
+    color: white;
+
+    @media screen and (min-width: 768px) {
+      font-size: 24px;
+    }
+  }
+
+  .contact__cta-tel-number {
+    font-size: 38px;
+    line-height: 1;
+    color: white;
+
+    @media screen and (min-width: 768px) {
+      font-size: 40px;
+    }
+  }
+
+  .contact__cta-tel-text {
+    color: white;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+  }
+}

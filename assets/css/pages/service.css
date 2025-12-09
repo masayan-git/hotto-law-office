@@ -1,0 +1,305 @@
+.service {
+  /* お悩みセクション */
+  .service__problem {
+    padding-bottom: 60px;
+
+    @media screen and (min-width: 768px) {
+      padding-bottom: 120px;
+    }
+  }
+
+  .service__problem-title {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+
+    @media screen and (min-width: 768px) {
+      font-size: 30px;
+    }
+  }
+
+  .service__problem-cards {
+    margin-top: 24px;
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    
+    @media screen and (min-width: 768px) {
+      margin-top: 60px;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 32px;
+    }
+  }
+
+  .service__problem-card {
+    display: grid;
+    row-gap: 16px;
+
+    @media screen and (min-width: 768px) {
+      row-gap: 24px;
+    }
+  }
+
+  .service__problem-card-image {
+    width: 150px;
+    justify-self: center;
+
+    img {
+      object-fit: contain;
+    }
+  }
+
+  .service__problem-card-title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+
+    @media screen and (min-width: 768px) {
+      font-size: 24px;
+    }
+  }
+
+  .service__problem-arrow {
+    width: 50px;
+    height: 50px;
+    background-color: var(--color-gray-2);
+    clip-path: polygon(50% 70%, 0 0, 100% 0);
+    margin: 40px auto;
+  }
+
+  .service__problem-solution {
+    padding: 42px 16px;
+    border-radius: 26px;
+    background-color: var(--color-sub);
+    display: grid;
+    row-gap: 32px;
+
+    @media screen and (min-width: 768px) {
+      grid-template-columns: 158px 1fr;
+      column-gap: 32px;
+      padding: 74px;
+      place-content: center;
+    }
+  }
+
+  .service__problem-solution-image {
+    max-width: 120px;
+    width: 100%;
+    margin-inline: auto;
+
+    @media screen and (min-width: 768px) {
+      max-width: initial;
+    }
+
+    img {
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .service__problem-solution-contents {
+    display: grid;
+    row-gap: 32px;
+    grid-auto-rows: max-content;
+
+    @media screen and (min-width: 768px) {
+      row-gap: 24px;
+      align-content: center;
+    }
+  }
+
+  .service__problem-solution-title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+
+    @media screen and (min-width: 768px) {
+      text-align: left;
+      font-size: 28pxx;
+    }
+  }
+
+  .service__problem-solution-text {
+    font-size: 18px;
+    line-height: 1.6;
+
+    @media screen and (min-width: 768px) {
+      font-size: 24px;
+    }
+  }
+
+  .service__section-title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+
+    @media screen and (min-width: 768px) {
+      font-size: 30px;
+    }
+  }
+
+  .service__support {
+    background-color: var(--color-gray);
+  }
+
+  .service__support-cards {
+    margin-top: 40px;
+    display: grid;
+    row-gap: 32px;
+    
+    @media screen and (min-width: 768px) {
+      margin-top: 60px;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+      column-gap: 32px;
+    }
+  }
+
+  .service__support-card {
+    display: grid;
+    row-gap: 14px;
+    position: relative;
+    padding: 24px;
+    background-color: white;
+    border-top-right-radius: 40px;
+
+    @media screen and (min-width: 768px) {
+      height: 100%;
+    }
+  }
+
+  .service__support-card-icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--color-main);
+  }
+
+  .service__support-card-title {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.6;
+
+    @media screen and (min-width: 768px) {
+      font-size: 24px;
+    }
+  }
+
+  .service__support-card-text {
+    font-size: 16px;
+  }
+
+  /* flow ご相談から解決までの流れ */
+  .service__flow {
+    background-color: var(--color-sub);
+  }
+
+  .service__flow-items {
+    margin-top: 40px;
+    display: grid;
+    row-gap: 32px;
+
+    @media screen and (min-width: 768px) {
+      margin-top: 60px;
+      row-gap: 42px;
+    }
+  }
+  
+  .service__flow-item {
+    position: relative;
+    padding: 26px 32px;
+    background-color: white;
+    border-top-right-radius: 40px;
+    background-color: white;
+    display: grid;
+    row-gap: 16px;
+
+    @media screen and (min-width: 768px) {
+      grid-template-columns: 43% 1fr;
+      padding: 42px;
+    }
+  }
+  
+  .service__flow-symbol {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--color-main);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .service__flow-title-area {
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+
+    @media screen and (min-width: 768px) {
+      padding-right: 20px;
+    }
+  }
+
+  .service__flow-icon {
+    width: 56px;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    color: white;
+    border-radius: 50%;
+    background-color: var(--color-main);
+    flex-shrink: 0;
+
+    @media screen and (min-width: 768px) {
+      width: 70px;
+      font-size: 32px;
+    }
+  }
+
+  .service__flow-title-group {
+    display: flex;
+    flex-direction: column;
+    row-gap: 6px;
+  }
+
+  .service__flow-step {
+    font-size: 18px;
+    line-height: 1;
+    color: var(--color-main);
+
+    @media screen and (min-width: 768px) {
+      font-size: 24px;
+    }
+  }
+
+  .service__flow-title {
+    font-weight: 700;
+    font-size: 20px;
+
+    @media screen and (min-width: 768px) {
+      font-size: 24px;
+    }
+  }
+
+  .service__flow-text-area {
+    @media screen and (min-width: 768px) {
+      padding-left: 43px;
+      border-left: 1px solid var(--color-black);
+    }
+  }
+
+  .service__flow-text {
+    font-size: 16px;
+    line-height: 2;
+  }
+}
