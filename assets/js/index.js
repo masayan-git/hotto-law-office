@@ -60,21 +60,39 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // lineボタン
-  const lineButtons = document.querySelectorAll('[aria-label="line"]')
+  const lineButtons = document.querySelectorAll('[aria-label="line"]');
   if (lineButtons) {
     lineButtons.forEach((button) => {
-      button.addEventListener('click', () => {
-        alert('こちらは架空サイトのLINEお問い合わせボタンです。実際のLINEアカウントには接続されていません。')
-      })
-    })
+      button.addEventListener("click", () => {
+        alert("こちらは架空サイトのLINEお問い合わせボタンです。実際のLINEアカウントには接続されていません。");
+      });
+    });
   }
 
   // フォーム送信ボタンを押したら完了画面へ遷移させる
-  const contactForm = document.querySelector('.contact__form')
+  const contactForm = document.querySelector(".contact__form");
   if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener("submit", (e) => {
       e.preventDefault();
-      window.location.href = './contact-complete.html'
-    })
+      window.location.href = "./contact-complete.html";
+    });
   }
+
+  const fadeEls = document.querySelectorAll(".fade-in");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.1, // 10%見えたら発火
+    }
+  );
+
+  fadeEls.forEach((el) => observer.observe(el));
 });
